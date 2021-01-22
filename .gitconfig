@@ -181,3 +181,7 @@
 [init]
 
 	defaultBranch = main
+
+[user]
+	email = lukas.elmlund@gmail.com
+	name = Lukas Elmlund

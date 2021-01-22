@@ -48,3 +48,9 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval "$('/c/tools/miniconda3/Scripts/conda.exe' 'shell.bash' 'hook')"
+# <<< conda initialize <<<
+
