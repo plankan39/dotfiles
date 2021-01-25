@@ -14,7 +14,6 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
 alias g="git"
-alias tlmgr="cmd C:/texlive/2020/tlpkg/installer/tl-cmd.bat CD %USERPROFILE%"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

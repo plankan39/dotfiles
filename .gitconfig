@@ -127,7 +127,7 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	gpgsign = false
 
 [diff]
 
@@ -184,4 +184,6 @@
 
 [user]
 	email = lukas.elmlund@gmail.com
-	name = Lukas Elmlund
+	name = plankan39
+[credential]
+	helper = store
