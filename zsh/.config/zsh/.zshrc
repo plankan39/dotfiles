@@ -9,6 +9,7 @@ ENABLE_CORRECTION="true"
 # see 'man strftime' for details.
 export HISTFILE=${XDG_CACHE_HOME:-$HOME/.cache}/.zsh_history
 HIST_STAMPS="yyyy-mm-dd"
+SAVEHIST=1000
 
 
 if [ -d $ZDOTDIR/zshrc.d ]; then
