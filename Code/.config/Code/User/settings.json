@@ -1,0 +1,21 @@
+{
+    "editor.fontFamily": "'Fira Code', 'Symbols Nerd Font', monospace",
+    "editor.fontLigatures": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.minimap.enabled": false,
+    "editor.rulers": [90],
+    "terminal.integrated.fontFamily": "'Fira Code','Symbols Nerd Font',  monospace",
+    "terminal.integrated.defaultLocation": "editor",
+    "window.autoDetectColorScheme": true,
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 0.5,
+    "telemetry.telemetryLevel": "off",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true
+    },
+    "cSpell.language": "en,sv-SE",
+    "editor.fontSize": 15,
+}
+
+ 
