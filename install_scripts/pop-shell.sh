@@ -35,19 +35,20 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Alt
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "@as []"
 gsettings set org.gnome.shell.keybindings toggle-overview "@as []"
 
-GTK4DIR="${XDG_CONFIG_HOME:-"$HOME/.config"}/gtk-4.0"
-hexaccent=$(cat ${GTK4DIR}/gtk.css |
-	grep accent_color |
-	cut -d \# -f 2 |
-	cut -d \; -f 1 |
-	tr '[:lower:]' '[:upper:]')
+# GTK4DIR="${XDG_CONFIG_HOME:-"$HOME/.config"}/gtk-4.0"
+# hexaccent=$(cat ${GTK4DIR}/gtk.css |
+# 	grep accent_color |
+#	cut -d \# -f 2 |
+#	cut -d \; -f 1 |
+#	tr '[:lower:]' '[:upper:]')
 
-a=$(echo $hexaccent | cut -c-2)
-b=$(echo $hexaccent | cut -c3-4)
-c=$(echo $hexaccent | cut -c5-6)
+# a=$(echo $hexaccent | cut -c-2)
+# b=$(echo $hexaccent | cut -c3-4)
+# c=$(echo $hexaccent | cut -c5-6)
 
-r=$(echo "ibase=16; $a" | bc)
-g=$(echo "ibase=16; $b" | bc)
-b=$(echo "ibase=16; $c" | bc)
+# r=$(echo "ibase=16; $a" | bc)
+# g=$(echo "ibase=16; $b" | bc)
+# b=$(echo "ibase=16; $c" | bc)
 
-gsettings set org.gnome.shell.extensions.pop-shell hint-color-rgba "rgba($r,$g,$b,0.7)"
+# gsettings set org.gnome.shell.extensions.pop-shell hint-color-rgba "rgba($r,$g,$b,0.7)"
+gsettings set org.gnome.shell.extensions.pop-shell hint-color-rgba "rgb(47,129,227)"
