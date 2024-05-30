@@ -18,7 +18,7 @@ zinit snippet OMZP::command-not-found
 
 # Load completions
 setopt globdots
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -d ${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/zcompdump-$ZSH_VERSION
 zinit cdreplay -q
 
 
