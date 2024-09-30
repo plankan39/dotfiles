@@ -4,6 +4,11 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 
+# Cache directory to be used
+ZSH_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}"/zsh
+[ ! -d $ZSH_CACHE ] && mkdir -p $ZSH_CACHE
+
+
 # Initialize zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
@@ -18,7 +23,7 @@ zinit snippet OMZP::command-not-found
 
 # Load completions
 setopt globdots
-autoload -Uz compinit && compinit -d ${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/zcompdump-$ZSH_VERSION
+autoload -Uz compinit && compinit -d $ZSH_CACHE/zcompdump-$ZSH_VERSION
 zinit cdreplay -q
 
 
@@ -34,10 +39,8 @@ CASE_SENSITIVE="true"
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-HISTFILE=${XDG_CACHE_HOME:-$HOME/.cache}/.zsh_history
+
+HISTFILE=$ZSH_CACHE/zsh_history
 HIST_STAMPS="yyyy-mm-dd"
 HISTSIZE=5000
 SAVEHIST=$HISTSIZE
