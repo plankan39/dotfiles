@@ -1,11 +1,20 @@
 #!/usr/bin/env sh
 
 # Easier navigation: .., ..., ...., ....., ~ and -
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias -- -="cd -"
+if [ $(command -v z) ]; then
+    alias cd="z"
+    alias ..="z .."
+    alias ...="z ../.."
+    alias ....="z ../../.."
+    alias .....="z ../../../.."
+    alias -- -="z -"
+else
+    alias ..="cd .."
+    alias ...="cd ../.."
+    alias ....="cd ../../.."
+    alias .....="cd ../../../.."
+    alias -- -="cd -"
+fi
 
 # Shortcuts
 alias dl="cd ~/Downloads"

@@ -20,6 +20,10 @@ zinit light Aloxaf/fzf-tab
 
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+
+zinit load zsh-users/zsh-history-substring-search
+zinit ice wait atload'_history_substring_search_config'
 
 # Load completions
 setopt globdots
@@ -32,6 +36,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+
+eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
 
 # Case-sensitive completion.
 CASE_SENSITIVE="true"
