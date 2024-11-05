@@ -1,0 +1,4 @@
+# Cache directory to be used
+export ZSH_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}"/zsh
+[ ! -d $ZSH_CACHE ] && mkdir -p $ZSH_CACHE
+

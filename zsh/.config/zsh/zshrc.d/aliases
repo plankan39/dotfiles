@@ -2,18 +2,18 @@
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 if [ $(command -v z) ]; then
-    alias cd="z"
-    alias ..="z .."
-    alias ...="z ../.."
-    alias ....="z ../../.."
-    alias .....="z ../../../.."
-    alias -- -="z -"
+  alias cd="z"
+  alias ..="z .."
+  alias ...="z ../.."
+  alias ....="z ../../.."
+  alias .....="z ../../../.."
+  alias -- -="z -"
 else
-    alias ..="cd .."
-    alias ...="cd ../.."
-    alias ....="cd ../../.."
-    alias .....="cd ../../../.."
-    alias -- -="cd -"
+  alias ..="cd .."
+  alias ...="cd ../.."
+  alias ....="cd ../../.."
+  alias .....="cd ../../../.."
+  alias -- -="cd -"
 fi
 
 # Shortcuts
@@ -28,14 +28,16 @@ alias e=$EDITOR
 # ls aliases
 # use eza instead of ls if available for colored output
 if [ -x "$(command -v eza)" ]; then
-	alias l="eza -1a"
-	alias la="eza -lagh"
-	alias ls="eza -lah --no-permissions --no-user"
+  alias l="eza -1a"
+  alias la="eza -lagh"
+  alias ls="eza -lah --no-permissions --no-user"
 fi
 
 # use bat instead of cat if it exists
 [[ -x "$(command -v bat)" ]] && alias cat="bat"
 
+# If yazi is installed alias to f
+[[ -x "$(command -v yazi)" ]] && alias f="yazi"
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
 alias grep='grep --color=auto'

@@ -1,14 +1,25 @@
+# XDG dirs
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CONFIG_DIRS="/etc/xdg"
+# Cache directory to be used
+export ZSH_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}"/zsh
+[ ! -d $ZSH_CACHE ] && mkdir -p $ZSH_CACHE
+# ZSH directory to load config from
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+
 export EDITOR="nvim"
 export VISUAL="nvim"
-export RUSTUP_HOME="/home/lukaselmlund/.local/share/rustup"
-export CARGO_HOME="/home/lukaselmlund/.local/share/cargo"
+
+# expand path
 PATH=/home/lukaselmlund/.local/bin:$PATH
 
-source /home/lukaselmlund/.local/share/cargo/env
+# load other environment scripts
+if [ -d $ZDOTDIR/zshenv.d ]; then
+  for file in $ZDOTDIR/zshenv.d/*; do 
+    source $file; 
+  done
+fi
 

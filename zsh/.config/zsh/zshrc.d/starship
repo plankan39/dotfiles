@@ -1,0 +1,2 @@
+#!/usr/bin/env zsh
+[[ -x $(command -v starship) ]] && eval "$(starship init zsh)"
