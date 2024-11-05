@@ -1,20 +1,35 @@
 {
+    "window.autoDetectColorScheme": true,
+    "window.titleBarStyle": "native",
+    "window.zoomLevel": 0.5,
+
+    "breadcrumbs.enabled": false,
+
+    "workbench.editor.showTabs": "multiple",
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.location": "hidden",
+    "workbench.startupEditor": "terminal",
+
     "editor.fontFamily": "'Fira Code', 'Symbols Nerd Font', monospace",
     "editor.fontLigatures": true,
+    "editor.lineHeight": 1.6,
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "editor.minimap.enabled": false,
     "editor.rulers": [90],
+    "editor.lineNumbers": "on",
+    "editor.occurrencesHighlight": "off",
+    "editor.lightbulb.enabled": "off",
+    "editor.guides.indentation": false,
+    "editor.matchBrackets": "near",
+    "editor.scrollbar.horizontal": "auto",
+    "editor.scrollbar.vertical": "hidden",
+    
     "terminal.integrated.fontFamily": "'Fira Code','Symbols Nerd Font',  monospace",
     "terminal.integrated.defaultLocation": "editor",
-    "window.autoDetectColorScheme": true,
-    "window.titleBarStyle": "custom",
-    "window.zoomLevel": 0.5,
+    
     "telemetry.telemetryLevel": "off",
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
     },
-    "cSpell.language": "en,sv-SE",
+    "workbench.preferredDarkColorTheme": "Default Dark+",
 }
-
- 
