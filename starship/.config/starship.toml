@@ -74,8 +74,9 @@ format = '[$symbol($version)]($style) '
 
 [directory]
 read_only = " 󰌾"
-truncation_length = 8
-truncate_to_repo = false
+truncation_length = 5
+truncation_symbol = ".../"
+truncate_to_repo = true
 
 [docker_context]
 symbol = " "
