@@ -13,7 +13,7 @@ gsettings set org.gnome.shell.extensions.pop-shell pop-monitor-left "['<Shift><C
 gsettings set org.gnome.shell.extensions.pop-shell pop-monitor-right "['<Shift><Control><Super>Right', '<Shift><Control><Super>L']"
 gsettings set org.gnome.shell.extensions.pop-shell pop-workspace-down "@as []"
 gsettings set org.gnome.shell.extensions.pop-shell pop-workspace-up "@as []"
-
+gsettings set org.gnome.shell.extensions.pop-shell toggle-stacking-global "['<Super><Control>S']"
 gsettings set org.gnome.desktop.wm.keybindings close "['<Super>q']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-down "@as []"
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left "@as []"
@@ -52,3 +52,4 @@ gsettings set org.gnome.shell.keybindings toggle-overview "@as []"
 
 # gsettings set org.gnome.shell.extensions.pop-shell hint-color-rgba "rgba($r,$g,$b,0.7)"
 gsettings set org.gnome.shell.extensions.pop-shell hint-color-rgba "rgb(47,129,227)"
+
