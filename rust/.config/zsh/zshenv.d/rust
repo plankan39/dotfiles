@@ -2,4 +2,7 @@
 
 export RUSTUP_HOME="$HOME/.local/share/rustup"
 export CARGO_HOME="$HOME/.local/share/cargo"
-source "$CARGO_HOME/env"
+
+if [[ -f "$CARGO_HOME/env" ]]; then
+    source "$CARGO_HOME/env"
+fi
