@@ -1,6 +1,4 @@
-#!/usr/bin/env zsh
-
-HISTFILE=$ZSH_CACHE/zsh_history
+HISTFILE=${ZSH_CACHE:-"$HOME/.cache/zsh"}/zsh_history
 HIST_STAMPS="yyyy-mm-dd"
 HISTSIZE=5000
 SAVEHIST=$HISTSIZE

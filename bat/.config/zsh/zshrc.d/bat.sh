@@ -9,4 +9,3 @@ export BAT_THEME="Catppuccin Mocha"
 export BAT_THEME_DARK="Catppuccin Mocha"
 export BAT_THEME_LIGHT="Catppuccin Latte"
 
-

@@ -1,12 +1,6 @@
-#!/usr/bin/env zsh
-
-
 # Load completions
-
-
-export ZSH_COMPDUMP=$ZSH_CACHE/zcompdump-$ZSH_VERSION
 setopt globdots
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -d "$ZSH_CACHE/zcompdump-$ZSH_VERSION"
 zinit cdreplay -q
 
 # Case-sensitive completion.
@@ -19,3 +13,4 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+

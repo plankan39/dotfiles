@@ -1,5 +1,3 @@
-#!/usr/bin/env sh
-
 # ls aliases
 # use eza instead of ls if available for colored output
 if [ -x "$(command -v eza)" ]; then
@@ -8,3 +6,4 @@ if [ -x "$(command -v eza)" ]; then
   alias la="eza -lagh"
   alias ls="eza"
 fi
+

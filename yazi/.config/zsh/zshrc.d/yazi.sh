@@ -1,4 +1,3 @@
-#!/usr/bin/env sh
 
 if [[ -x $(command -v yazi) ]]; then
     function y() {
@@ -10,3 +9,4 @@ if [[ -x $(command -v yazi) ]]; then
         rm -f -- "$tmp"
     }
 fi
+

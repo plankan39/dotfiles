@@ -1,4 +1,3 @@
-#!/usr/bin/env sh
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
