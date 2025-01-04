@@ -1,8 +1,12 @@
 #!/usr/bin/env zsh
 
+
 # Load completions
+
+
+export ZSH_COMPDUMP=$ZSH_CACHE/zcompdump-$ZSH_VERSION
 setopt globdots
-autoload -Uz compinit && compinit -d $ZSH_CACHE/zcompdump-$ZSH_VERSION
+autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # Case-sensitive completion.
