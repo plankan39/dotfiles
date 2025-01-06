@@ -24,14 +24,15 @@ return {
     },
     sections = {
       lualine_a = { {'mode', separator = { left = '' }, right_padding = 2} },
-      lualine_b = {'branch', 'diff', 'diagnostics'},
-      lualine_c = {
-        { 'filetype', icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-        { 'filename', padding = { left = 0 } },
-      },
-      lualine_x = {
+      lualine_b = {
+        'branch',
         {
           'diff',
+          symbols = {
+            added = " ",
+            modified = " ",
+            removed = " ",
+          },
           source = function()
             local gitsigns = vim.b.gitsigns_status_dict
 
@@ -44,8 +45,15 @@ return {
             end
           end,
         },
-        'encoding',
-        'fileformat',
+      },
+      lualine_c = {
+        'diagnostics',
+        { 'filetype', icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+        { 'filename', padding = { left = 0 } },
+      },
+      lualine_x = {
+        -- 'encoding',
+        -- 'fileformat',
       },
       lualine_y = {'progress'},
       lualine_z = { { 'location', separator = { right = '' }, left_padding = 2 }, }
@@ -61,6 +69,6 @@ return {
     tabline = {},
     winbar = {},
     inactive_winbar = {},
-    extensions = {}
+    extensions = {"neo-tree", "fzf", "lazy"}
   },
 }
