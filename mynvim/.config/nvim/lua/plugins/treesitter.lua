@@ -3,8 +3,8 @@ return {
   build = ":TSUpdate",
   main = "nvim-treesitter.configs",
   opts = {
-    ensure_installed = { 
-      'go', 'lua', 'python', 'rust', 'c', 'typescript', 'regex', 
+    ensure_installed = {
+      'go', 'lua', 'python', 'rust', 'c', 'typescript', 'regex',
       'bash', 'markdown', 'markdown_inline', 'kdl', 'sql',
       'html', 'css', 'javascript', 'yaml', 'json', 'toml',
       'java',
