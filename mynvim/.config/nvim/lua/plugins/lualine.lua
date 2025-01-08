@@ -1,6 +1,7 @@
 return {
   'nvim-lualine/lualine.nvim',
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  -- enabled = false,
+  dependencies = { 'nvim-tree/nvim-web-devicons', 'folke/snacks.nvim', 'LazyVim/LazyVim' },
   opts = {
     options = {
       icons_enabled = true,
@@ -28,11 +29,7 @@ return {
         'branch',
         {
           'diff',
-          symbols = {
-            added = " ",
-            modified = " ",
-            removed = " ",
-          },
+          symbols = require("config.icons").git,
           source = function()
             local gitsigns = vim.b.gitsigns_status_dict
 
@@ -47,13 +44,24 @@ return {
         },
       },
       lualine_c = {
-        'diagnostics',
-        { 'filetype', icon_only = true,      separator = "", padding = { left = 1, right = 0 } },
-        { 'filename', padding = { left = 0 } },
+        LazyVim.lualine.root_dir(),
+        { 'diagnostics', },
+        { 'filetype',    icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+        LazyVim.lualine.pretty_path(),
       },
       lualine_x = {
-        -- 'encoding',
-        -- 'fileformat',
+        -- stylua: ignore
+        {
+          function() return "  " .. require("dap").status() end,
+          cond = function() return package.loaded["dap"] and require("dap").status() ~= "" end,
+          color = function() return { fg = require("snacks").util.color("Debug") } end,
+        },
+        -- stylua: ignore
+        {
+          require("lazy.status").updates,
+          cond = require("lazy.status").has_updates,
+          color = function() return { fg = require("snacks").util.color("Special") } end,
+        },
       },
       lualine_y = { 'progress' },
       lualine_z = { { 'location', separator = { right = '' }, left_padding = 2 }, }

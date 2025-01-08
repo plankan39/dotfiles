@@ -21,6 +21,12 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+
+
+
+local lazyvimpath = vim.fn.stdpath("data") .. "/lazy/LazyVim"
+vim.opt.rtp:prepend(lazyvimpath)
+_G.LazyVim = require("lazyvim.util")
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
