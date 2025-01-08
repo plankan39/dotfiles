@@ -75,23 +75,4 @@ return {
     Variable      = "󰀫 ",
   },
 }
--- M.modified = {
--- }
--- M.git_status = {
---   symbols = {
---     modified  = " ",
---     untracked = "",
---     added     = "✚", -- NOTE: you can set any of these to an empty string to not show them
---     deleted   = "✖",
---     -- modified  = "",
---     renamed   = "󰁕",
---     -- Status type
---     -- untracked = "",
---     ignored   = "",
---     unstaged  = "󰄱",
---     staged    = "",
---     conflict  = "",
---   }
--- }
--- local icons = LazyVim.config.icons
--- return M
+

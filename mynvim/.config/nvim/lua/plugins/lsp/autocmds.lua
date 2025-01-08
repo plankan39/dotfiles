@@ -12,12 +12,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
 
     -- Create a command `:Format` local to the LSP buffer
-    vim.api.nvim_buf_create_user_command(event.buf, 'Format', function(_)
-      if vim.lsp.buf.format then
-        vim.lsp.buf.format()
-      elseif vim.lsp.buf.formatting then
-        vim.lsp.buf.formatting()
-      end
-    end, { desc = 'Format current buffer with LSP' })
+    -- vim.api.nvim_buf_create_user_command(event.buf, 'Format', function(_)
+    --   if vim.lsp.buf.format then
+    --     vim.lsp.buf.format()
+    --   elseif vim.lsp.buf.formatting then
+    --     vim.lsp.buf.formatting()
+    --   end
+    -- end, { desc = 'Format current buffer with LSP' })
   end,
 })
