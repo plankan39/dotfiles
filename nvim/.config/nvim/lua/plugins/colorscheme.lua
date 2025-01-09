@@ -2,19 +2,13 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "adwaita",
     },
   },
-  {
-    "catppuccin/nvim",
-    lazy = false,
-    name = "catppuccin",
-    priority = 1000,
-  },
-  {
-    "nvim-lualine/lualine.nvim",
-    opts = { options = { theme = "catppuccin" } },
-  },
+  -- {
+  --   "nvim-lualine/lualine.nvim",
+  --   opts = { options = { theme = "catppuccin" } },
+  -- },
   {
     "f-person/auto-dark-mode.nvim",
     opts = {
@@ -39,7 +33,7 @@ return {
   },
   {
     "Mofiqul/adwaita.nvim",
-    enabled = false,
+    enabled = true,
     lazy = false,
     priority = 1000,
   },
