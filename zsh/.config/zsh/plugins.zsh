@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 # Plugin manager ZINIT
 # Install if not installed
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -21,3 +19,4 @@ zinit snippet OMZ::plugins/git/git.plugin.zsh
 
 zinit load zsh-users/zsh-history-substring-search
 zinit ice wait atload'_history_substring_search_config'
+

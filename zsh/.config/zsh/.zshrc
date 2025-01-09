@@ -1,12 +1,11 @@
 # Source plugins
-source $ZDOTDIR/plugins
+source $ZDOTDIR/plugins.zsh
 
 # Completions
-source $ZDOTDIR/completions
+source $ZDOTDIR/completions.zsh
 
-
+# Extra configurations
 for file in $ZDOTDIR/zshrc.d/*; do 
   source $file; 
 done
-
 

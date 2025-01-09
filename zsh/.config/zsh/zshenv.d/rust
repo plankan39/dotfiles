@@ -1,5 +1,0 @@
-#!/usr/bin/env sh
-
-export RUSTUP_HOME="$HOME/.local/share/rustup"
-export CARGO_HOME="$HOME/.local/share/cargo"
-source "$CARGO_HOME/env"
