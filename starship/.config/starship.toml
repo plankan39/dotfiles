@@ -30,7 +30,6 @@ $time\
 $cmd_duration
 """
 
-palette = "catppuccin_mocha"
 
 [aws]
 symbol = "  "

@@ -34,8 +34,10 @@ if [ -x "$(command -v eza)" ]; then
 fi
 
 # use bat instead of cat if it exists
-[[ -x "$(command -v bat)" ]] && alias cat="bat"
-
+if [[ -x "$(command -v bat)" ]]; then
+  export BAT_THEME=base16
+  alias cat="bat"
+fi
 # If yazi is installed alias to f
 [[ -x "$(command -v yazi)" ]] && alias f="yazi"
 # Always enable colored `grep` output
