@@ -1,5 +1,5 @@
 [user]
-	email = lukas.elmlund@gmail.com
+  email = lukas.elmlund@gmail.com
   name = Lukas Elmlund
 [pull]
-	rebase = false
+  rebase = false
