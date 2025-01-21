@@ -54,21 +54,21 @@ gsettings set org.gnome.Weather locations \
 
 gsettings set org.gnome.desktop.wm.keybindings close "['<Super>q', '<Alt>F4']"
 
-gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-down ['<Super><Shift><Control>Down', '<Super><Shift><Control>J']
-gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left ['<Super><Shift><Control>Left', '<Super><Shift><Control>H']
-gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right ['<Super><Shift><Control>Right', '<Super><Shift><Control>L']
-gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-up ['<Super><Shift><Control>Up', '<Super><Shift><Control>K']
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-down "['<Super><Shift><Control>Down', '<Super><Shift><Control>J']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left "['<Super><Shift><Control>Left', '<Super><Shift><Control>H']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right "['<Super><Shift><Control>Right', '<Super><Shift><Control>L']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-up "['<Super><Shift><Control>Up', '<Super><Shift><Control>K']"
 
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down ['<Super><Shift>Down', '<Super><Shift>J']
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left ['<Super><Shift>Page_Up', '<Super><Shift>Left', '<Super><Shift>H']
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right ['<Super><Shift>Page_Down', '<Super><Shift>Right', '<Super><Shift>L']
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up ['<Super><Shift>Up', '<Super><Shift>K']
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Super><Shift>Down', '<Super><Shift>J']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Page_Up', '<Super><Shift>Left', '<Super><Shift>H']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Super><Shift>Page_Down', '<Super><Shift>Right', '<Super><Shift>L']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Super><Shift>Up', '<Super><Shift>K']"
 
 
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down ['<Super><Control>Down','<Super><Control>J']
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left ['<Super>Page_Up', '<Super><Alt>Left', '<Super><Control>Left', '<Super><Control>H']
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right ['<Super>Page_Down', '<Super><Alt>Right', '<Super><Control>Right', '<Super><Control>L']
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up ['<Super><Control>Up','<Super><Control>K']
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Super><Control>Down','<Super><Control>J']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Super><Alt>Left', '<Super><Control>Left', '<Super><Control>H']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Super><Alt>Right', '<Super><Control>Right', '<Super><Control>L']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Super><Control>Up','<Super><Control>K']"
 
 for i in {1..9}
 do
@@ -79,5 +79,5 @@ do
 done
 
 
-gsettings set org.gnome.settings-daemon.plugins.media-keys www ['<Super>b']
-gsettings set org.gnome.settings-daemon.plugins.media-keys home ['<Super>f']
+gsettings set org.gnome.settings-daemon.plugins.media-keys www "['<Super>b']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>f']"
